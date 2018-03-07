@@ -28,14 +28,14 @@ public final class BasketTests {
     public void canGetTotalWith15PercentTax() {
         final Basket basket = new Basket();
         basket.add(new Item(bd(10)));
-        assertEquals(bd(11.5), basket.total());
+        assertEquals(bd(12), basket.total());
     }
 
     @Test
     public void canGetTotalWith15PercentTaxRoundedDown() {
         final Basket basket = new Basket();
         basket.add(new Item(bd(1.10)));
-        assertEquals(bd(1.26), basket.total());
+        assertEquals(bd(1.32), basket.total());
     }
 
     private BigDecimal bd(final double val) {

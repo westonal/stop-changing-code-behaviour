@@ -21,7 +21,7 @@ public final class Basket {
 
     public BigDecimal total() {
         return subTotal()
-                .multiply(BigDecimal.valueOf(1.15))
+                .multiply(BigDecimal.valueOf(1.2))
                 .setScale(2, BigDecimal.ROUND_DOWN);
     }
 }
