@@ -25,14 +25,14 @@ public final class BasketTests {
     }
 
     @Test
-    public void canGetTotalWith15PercentTax() {
+    public void canGetTotalWith20PercentTax() {
         final Basket basket = new Basket();
         basket.add(new Item(bd(10)));
         assertEquals(bd(12), basket.total());
     }
 
     @Test
-    public void canGetTotalWith15PercentTaxRoundedDown() {
+    public void canGetTotalWith20PercentTaxRoundedDown() {
         final Basket basket = new Basket();
         basket.add(new Item(bd(1.10)));
         assertEquals(bd(1.32), basket.total());
