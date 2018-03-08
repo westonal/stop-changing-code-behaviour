@@ -5,7 +5,13 @@ import java.util.LinkedList;
 import java.util.List;
 
 public final class Basket {
+
     private final List<Item> items = new LinkedList<>();
+    private final Tax tax;
+
+    Basket(final Tax tax) {
+        this.tax = tax;
+    }
 
     public void add(final Item item) {
         items.add(item);
@@ -20,8 +26,6 @@ public final class Basket {
     }
 
     public BigDecimal total() {
-        return subTotal()
-                .multiply(BigDecimal.valueOf(1.15))
-                .setScale(2, BigDecimal.ROUND_DOWN);
+        return tax.applyTo(subTotal());
     }
 }
