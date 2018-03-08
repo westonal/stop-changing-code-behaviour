@@ -8,7 +8,7 @@ import static org.junit.Assert.assertEquals;
 public final class BasketTests {
 
     private Basket givenBasket() {
-        return new Basket(new Tax());
+        return new Basket(new Tax15PCRoundedDown());
     }
 
     @Test
